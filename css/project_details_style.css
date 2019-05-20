@@ -1,0 +1,80 @@
+body {
+  font-family:Georgia,serif;
+}
+
+p, li {
+  font-size: 100%;
+  line-height: 20px;
+  text-align: justified;
+}
+
+p {
+  text-indent: 15px;
+}
+
+h1 {
+  font-size:160%;
+}
+
+h2 {
+  font-size:125%;
+}
+
+img {
+  height: 300px;
+  display: block;      /* introduced later - Need to make it a block level element to centre it */
+  margin-left: auto;  /* introduced later */
+  margin-right: auto; /* introduced later */
+  border: 1px solid blue;
+  box-shadow: 10px 10px 5px gray;
+}
+
+figure {
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+figcaption {
+  display: block;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+  font-size: 90%;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: lower-roman;
+}
+
+.mkbold {
+  font-weight: 900;
+}
+
+.mkunderlined {
+  text-decoration: underline;
+}
+
+#can {
+  font-weight: 900;
+}
+
+#page {
+  width:950px;
+  display: block;
+  padding: 20px 20px 20px 20px;
+
+
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin: 0px auto 0px auto;
+
+
+  /* margin: inherit; */
+  border: 2px solid black;
+}

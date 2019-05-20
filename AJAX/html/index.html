@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Example from: https://www.w3schools.com/xml/ajax_php.asp -->
+  <script src='../js/showHint.js'></script>
+
+  <!-- Initialize a global array for search hints-->
+  <script type='text/javascript'>var hintArray[] = null;</script>
+  
+</head>
+
+<body>
+  <p>
+    Type a Company name:
+  </p>
+  <form>
+    Name: <input type='text' onkeyup="showHint(this.value)" />  <!-- this.value contains the input text -->
+  </form>
+  <p>
+    Suggestions: <span id='txtHint'></span>
+  </p>
+
+
+</body>
+</html>

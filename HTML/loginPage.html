@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+
+    <meta name='description' content='Logint for project VI' />
+		<meta name='robots' content='index follow' /> <!-- want page and links to be indexed -->
+		<meta http-equiv='author' content='Michael' />
+		<meta http-equiv='pragma' content='no-cache' /> <!-- force browser to reload page every time - updates often -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Add Bootstrap via CDN - Source: https://getbootstrap.com/ -->
+		<!-- CSS for the Layout and Styling components of Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!-- Stylesheet -->
+		<!-- Optional Bootstrap components for using functions etc -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>			<!-- JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> <!-- Popper.JS -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> <!-- JQuery -->
+
+		<link href='../css/styles.css' type='text/css' rel='stylesheet' />
+    <!--[if lt IE 9]>
+      <script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
+    <![endif] -->
+
+  </head>
+  <body>
+    <div id='loginPage'>
+      <header>
+  			<nav>
+  				<!-- navigation menu to be placed here later -->
+  			</nav>
+  		</header>
+
+      <article>
+        <form action='../php/authenticate.php' method='POST' id='login'>  <!-- Previously submitted to login.php, but now using authenticate.php -->
+          <h1>Please log in</h1>
+
+          <div>
+            <label for='user' class='text_label'>Username:</label>
+            <input id='user' class='text_input' type='text' name='username' required />
+            <span id='userfeedback'></span>
+          </div><br />
+          <div>
+            <label for='pass' class='text_label'>Password: </label>
+            <input id='pass' class='text_input' type='password' name='password' required />
+            <span id='passwordfeedback'></span>
+          </div>
+          <div>
+            <input class='logmein' type='submit' value='Log in'/>
+          </div>
+        </form>
+      </article>
+
+      <br /><br />
+      <footer>
+        <p id='copyright'>
+          Copyright &copy Michael Galle
+        </p>
+      </footer>
+
+      <p>
+        <a href="index.html">Back to index</a>
+      </p><br />
+
+    </div>
+
+  <script src='../js/eventListeners.js'></script>
+  </body>
+</html>

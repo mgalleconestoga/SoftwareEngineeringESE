@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Project VI - Home Page (Under Construction)</title>
+		<meta name='description' content='Home page for project VI' />
+		<meta name='robots' content='index follow' /> <!-- want page and links to be indexed -->
+		<meta http-equiv='author' content='Michael' />
+		<meta http-equiv='pragma' content='no-cache' /> <!-- force browser to reload page every time - updates often -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+		<!-- Add Bootstrap via CDN - Source: https://getbootstrap.com/ -->
+		<!-- CSS for the Layout and Styling components of Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!-- Stylesheet -->
+		<!-- Optional Bootstrap components for using functions etc -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>			<!-- JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> <!-- Popper.JS -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> <!-- JQuery -->
+
+		<link href='../css/styles.css' type='text/css' rel='stylesheet' />
+		<!--[if lt IE 9]>
+			<script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
+		<![endif] -->
+
+	</head>
+	<body onload='showFloorInterval(3000)'>
+		<header>
+			<div id='header'>
+				<!-- This is an html comment -->
+				<nav>
+					<ul>
+						<li class='h_menu'><a class='menu' href="about.html">About</a></li>
+						<li class='h_menu'><a class='menu' href="Project_Plan.html">Project Plan</a></li>
+						<li class='h_menu'><a class='menu' href="ProjectDetails.html">Project Details</a></li>
+						<li class='h_menu'><a class='menu' href="Log_Book_Michael.html">Log Books</a></li>
+						<li class='h_menu'><a class='menu' href="../documents">Documents</a></li>
+						<li class='h_menu'><a class='menu' href="about.html#videos">Videos</a></li>
+						<li class='h_menu'><a class='menu' href="loginPage.html">Login</a></li>
+						<li class='h_menu'><a class='menu' href="requestAccess.html">Request Access</a></li>
+					</ul>
+					<hr  />
+				</nav>
+			</div>
+		</header>
+
+		<div id='content'>
+			<article>
+				<h1>Project VI - Home Page</h1>
+
+				<div class='row'>
+						<div class='col-1'></div> <!-- Left side space -->
+						<div class='col-10'>				<!-- Nested column -->
+								<div class='row'>					<!-- Row in Nested column -->
+									<div class='col-sm-12 col-md-6'>
+										<div class='row'>
+											<div class='col-md-1'></div>
+											<div class='col-md-10 mybox'>
+												<section>
+													<h2 id='greet'></h2>
+													<p>Welcome to the Project VI home page</p>
+													<p><i>The title of this section changes using JavaScript depending on the time of day.</i></p>
+												</section>
+											</div>
+											<div class='col-md-1'></div>
+										</div>
+
+									</div>
+									<div class='col-sm-12 col-md-6'>
+										<div class='row'>
+											<div class='col-md-1'></div>
+											<div class='col-md-10 mybox'>
+												<section>
+													<p>
+														Elevator currently on floor
+													</p>
+														<div>
+															<h1 id='floor' onclick='showFloor();'>FLOOR</h1>  <!-- see body tag as this changes also on page load -->
+														</div>
+													<p>
+														<i>Click the bold text to update the floor number without submitting the page. Otherwise, updates occur every 3 seconds without the need to submit the page (via AJAX calls)</i>
+													</p>
+												</section>
+											</div>
+											<div class='col-md-1'></div>
+									</div>
+								</div>
+						</div>
+						<div class='col-1'></div> <!-- Right side space -->
+				</div>
+
+			</article>
+			<br />
+			<article>
+				<div class='row'>
+						<div class='col-1'></div> <!-- Left side space -->
+						<div class='col-10'>				<!-- Nested column -->
+								<div class='row'>					<!-- Row in Nested column -->
+									<div class='col-sm-12 col-md-6'>
+										<div class='row'>
+											<div class='col-md-1'></div>
+											<div class='col-md-10 mybox'>
+												<section>
+													<p>
+														There are more points here
+													</p>
+												</section>
+											</div>
+											<div class='col-md-1'></div>
+										</div>
+
+									</div>
+									<div class='col-sm-12 col-md-6'>
+										<div class='row'>
+											<div class='col-md-1'></div>
+											<div class='col-md-10 mybox'>
+												<section>
+													<p>
+														There is more text here
+													</p>
+												</section>
+											</div>
+											<div class='col-md-1'></div>
+									</div>
+								</div>
+						</div>
+						<div class='col-1'></div> <!-- Right side space -->
+				</div>
+
+			</article>
+
+		<br /><br />
+		<footer>
+			<p id='copyright'>
+				Copyright &copy Michael Galle
+			</p>
+		</footer>
+
+			<!-- Insert JavaScript files here -->
+			<script src='../js/greeting.js'></script>  <!-- Greets user depending on time of day -->
+			<script src='../js/floorNum.js'></script> <!-- Uses AJAX requests via XMLHttpRequest() to get the floor number from a server/database -->
+	</body>
+</html>
