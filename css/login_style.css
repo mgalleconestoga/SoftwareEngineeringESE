@@ -1,0 +1,45 @@
+* { margin:0;}
+
+.text_label {                   /* total width = 117 = 100 + 10 + 5 + 2 = 117 */
+    /*display:inline-block; */  /* Another option instead of float */ 
+    float: left;
+    width: 100px;
+    padding: 5px 10px 5px 5px;
+    text-align: right;
+}
+
+.text_input {               /* total width = 207 = 200 + 5 + 2 */
+    width: 200px;
+    text-align: left;
+    padding: 5px 0px 5px 5px;
+    /*border: 1px solid black;*/   /*This line caused issues in the class!!! - bug in CSS when placing a border on a text input? */  
+}
+
+div {                   /* total width = 207+117 = 324 */
+    padding: 0px 0px 0px 0px;
+    width: 324px;       
+}
+
+#submit {
+    float: right; 
+}
+
+/* Code from notes tested in class and works!! */
+/*
+
+.text_label {						
+	float: left;
+	width: 100px;
+	text-align: right;
+	padding: 0px 10px 0px 0px;}
+.text_input {				 			
+	width: 150px;
+	text-align: left;
+	padding: 0px 0px 0px 10px;
+}
+div { padding: 10px 0px 10px 0px;	
+	width: 274px;}
+
+#submit { float: right; }
+
+*/

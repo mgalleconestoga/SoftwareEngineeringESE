@@ -32,9 +32,8 @@ foreach ($rows as $row) {
 
 // Example 2 - function to update certain fields in a database
 /* *************************************************************** */
-/*
 
-function update_elevatorNetwork(int $node_ID, int $new_status = 1): void {
+function update_elevatorNetwork(string $tablename, int $node_ID, int $new_status = 1): void {
     $db = new PDO(
         'mysql:host=127.0.0.1;dbname=elevator',     // Database name
         'michaelG',                                 // username
@@ -47,8 +46,10 @@ function update_elevatorNetwork(int $node_ID, int $new_status = 1): void {
     $db->beginTransaction();                        // Roll back point
     try {
         // Change elevatorNetwork 
-        $query = "UPDATE elevatorNetwork SET status = :stat WHERE nodeID = :id"; 
+        $query = "UPDATE $tablename SET status = :stat WHERE nodeID = :id"; // This allows different tables to be selected but risks an SQL injection at the $tablename variable
+                                                                            // A solution to this problem is to use a switch statment: https://stackoverflow.com/questions/182287/can-php-pdo-statements-accept-the-table-or-column-name-as-parameter
         $statement = $db->prepare($query); 
+        //$statement->bindValue('tablename', $tablename);   // This will not work when using bindValue/prepared statements as it risks an SQL injection (which is what preprared statements try to avoid)
         $statement->bindValue('stat', $new_status); 
         $statement->bindValue('id', $node_ID);
         $statement->execute();
@@ -68,9 +69,9 @@ function update_elevatorNetwork(int $node_ID, int $new_status = 1): void {
 }
 
 // Start program
-update_elevatorNetwork(1, 21);       // Should succeed if nodeID = 1 does not have status = 21
+update_elevatorNetwork('elevatorNetwork',1, 56);       // Should succeed if nodeID = 1 does not have status = 21
 echo '<br/><br/>';
-update_elevatorNetwork(1000, 6);    // Should fail since thre is no nodeID == 1000
+//update_elevatorNetwork(1000, 6);    // Should fail since thre is no nodeID == 1000
 
 
 
@@ -91,12 +92,12 @@ foreach ($rows as $row) {
     var_dump($row);
     echo '<br/><br/>';
 }
-*/
 
 
-// Example 3 - function to update ANY field in ANY database
+
+// Example 3 - function to update ANY field in ANY table
 /* *************************************************************** */
-
+/*
 function update(string $tablename, string $wherefield, int $wherefieldValue, string $fieldname, int $newfieldvalue): void {
     $db = new PDO(
         'mysql:host=127.0.0.1;dbname=elevator',     // Database name
@@ -110,7 +111,7 @@ function update(string $tablename, string $wherefield, int $wherefieldValue, str
     // Use transactions 
     $db->beginTransaction();        // Roll back point
     try {
-        // Change any field in any table - requires DIRECTLY changing the query string (this cannot be done using prepared statements - it is not allowed)
+        // Change ANY field in ANY table - requires DIRECTLY changing the query string (this cannot be done using prepared statements - it is not allowed)
         $query = "UPDATE $tablename SET $fieldname = $newfieldvalue WHERE $wherefield = $wherefieldValue";   // The DOUBLE QUOTES here are NECESSARY since we use single quotes for the strings !!!
         $statement = $db->prepare($query); 
         $statement->execute();
@@ -151,6 +152,6 @@ foreach ($rows as $row) {
     var_dump($row);
     echo '<br/><br/>';
 }
-
+*/
 
 ?>
