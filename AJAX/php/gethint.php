@@ -5,7 +5,7 @@
 // Array of companies
 $a = array("Amazon", "Apple", "Alcatel", "BestBuy", "Bravo", "Cambria", "Dell", "FaceBook", "Netflix", "Google");
 
-// get teh q parameter from URL
+// get the q parameter from URL
 $q = $_REQUEST["q"];
 
 // If $q is not empty string "" then lookup all matching substrings in the array

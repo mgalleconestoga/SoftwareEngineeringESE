@@ -10,7 +10,7 @@ function showHint(str) {
           // readyState holds the status of the XMLHttpRequest (4 means finished request and server response is ready)
           // status hold 200 for OK
           var resp = this.responseText;   // Text string returned from server in 'echo' statement
-          hintArray = JSON.parse(resp);   // THIS IS A GLOBAL VARIABLE/ARRAY SINCE VAR IS NOT DECLARED - Convert text string to javascript array in JSON format 
+          hintArray = JSON.parse(resp);   // THIS IS A GLOBAL VARIABLE/ARRAY SINCE DECLARED IN HTML FILE - Convert text string to javascript array in JSON format 
           printHint();
         }
       };
