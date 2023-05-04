@@ -1,0 +1,46 @@
+h1, h2 {
+    /*font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Macondo', cursive;
+
+    color:#FF0000;
+}
+
+body {
+    color:rgb(0, 0, 255, 0.5);
+}
+
+#ppheading {
+    color:green;
+    font-family: 'Roboto', sans-serif;
+}
+
+.heading {
+    color: rgba(125,125,125,0.7) !important;
+}
+
+ol li ul li {
+    text-decoration: line-through;
+}
+
+tr {
+    background-color: rgb(255, 230, 221);
+}
+
+td {
+    text-align: center;
+    border: 1px solid black;
+}
+
+td:hover {
+    background-color: aquamarine;
+    border: 1px dashed black;
+    padding: 0px 0px;
+}
+
+table {
+    margin: 0px auto 0px auto;
+    width: 400px;
+    border-spacing: 5px;
+    border: 1px solid green;
+    /*empty-cells: hide;*/
+}

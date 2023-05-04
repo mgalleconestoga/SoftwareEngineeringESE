@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Access</title>
+    <link href="../css/req_acc.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Request Access</h1>
+    <form action="../PHP/request_access.php" method="post" id="access">
+        <fieldset>
+            <legend>Contact details</legend>
+            <p>First name: <input type="text" name="firstname"></p>
+            <p>Last name: <input type="text" name="lastname"></p>
+            <p>Email: <input type="email" name="email"></p>
+            <p>Birthdate: <input type="date" name="birthdate"></p>
+            <p>Website: <input type="url" name="url"></p>
+        </fieldset>
+
+        <label><input type="radio" name="fac_or_student" value="faculty" > Faculty </label>
+        <label><input type="radio" name="fac_or_student" value="student" > Student </label><br />
+
+        <p>My involvement in the project is ...</p>
+        <label><input type="checkbox" name="involvement[]" value="none" > None </label><br />
+        <label><input type="checkbox" name="involvement[]" value="some" > Some <br /></label>
+        <label><input id="lots" type="checkbox" name="involvement[]" value="lots" > Lots </label><br />
+        
+        <p>Do you drive?</p>
+        <select name="driver" id="car">
+            <option value="no_answer" selected></option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <p>Tell us about yourself</p>
+        <textarea class="text" name="details" rows="6" cols="25">Please tell us about urself</textarea><br />
+        <input class="submit" type="submit">
+    </form>
+    
+</body>
+</html>

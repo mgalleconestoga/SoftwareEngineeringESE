@@ -1,0 +1,21 @@
+a:link.menu {
+    color:gold
+}
+
+a:visited.menu {
+    color:silver;
+}
+
+a:hover.menu {
+    font-size:100%;
+}
+
+a:active.menu {
+    font-size:100%;
+    background-color: #cfe;
+    font-weight:900;
+}
+
+li.h_menu {
+    display:inline;
+}
