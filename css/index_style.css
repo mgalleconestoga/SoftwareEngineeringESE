@@ -1,0 +1,60 @@
+/* Pseudo-classes for Menu Links */
+a:link.menu {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+}
+
+a:visited.menu {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+}
+
+a:hover.menu {
+	font-weight: bold;
+    background-color: gray;	
+}
+
+a:active.menu {
+	font-weight: bold;
+	color: orange;
+}
+
+/* Pseudo-classes for Buttons and Forms */
+input.submit {
+	background-color: blue;
+	color: white; }
+input.submit:hover {
+	background-color: white;
+	color: blue; }	
+input.submit:active {
+	color: orange;}
+
+input.text, textarea.text {
+	color: gray;}
+input.text:focus, textarea.text:focus {
+	color: black;}
+
+/* Layout, positioning, float, z-index */ 
+* { margin: 0; padding: 0; border: none; }  /* Reset default margin and padding (8px default) */
+li.h_menu { display: inline; padding: 5px;}
+#logo { float: left; width: 150px;}
+#header { position: fixed; width: 600px; z-index: 100; background-color: black; text-align: center; border: 1px solid black;}
+#header_menu { position: absolute; bottom: 15px; left: 185px;}
+#main { clear: left; position: relative; top: 75px; border: 1px solid black; text-align: center;
+		width: 600px;    					/* Comment this out to see how the paragraphs float as browser window width changes */ }
+p#feature { width: 600px;		
+			height: 200px; 
+			background-color: #ece395}
+p#sub_feature1 { width: 200px;	
+				 background-color: #b4e193;}
+p#sub_feature2 { width: 200px;	
+				 background-color: #b292e3;}
+p#sub_feature3 { width: 200px;	
+				 background-color: #93dbe1;}
+p { width: 300px;  
+	height: 100px; background-color: gray; 	float:left; }
+#footer { clear: left;}
+
+

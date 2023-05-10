@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Form events</title></head>
+	<body>
+		<h1>Request Access</h1>
+		<form id="reqAccess" action="../php/req_access.php" method="post">
+			<fieldset>
+				<legend>Contact Details</legend>
+				<div>
+					<label for="fname" class="text_label" >First Name:</label>
+					<input id="fname" class="text_input" type="text" name="firstname"  /> 
+					<a id="firstNameFeedback"></a>
+				</div>
+				<div>
+					<label for="lname" class="text_label">Last Name:</label>  
+					<input id="lname" class="text_input" type="text" name="lastname"  /> 
+					<a id="lastNameFeedback"></a>
+				</div>	
+				<div>
+					<label><input id="terms" type="checkbox" name="terms" value="none" />I agree to the terms </label>
+					<a id="termsFeedback"></a>
+				</div>
+			</fieldset>
+			<br />
+			<input id="submit" type="submit" value="Submit Request" />
+		</form>
+		<script src="../js/formEvent.js"></script>
+	</body>
+</html>
+
+
+
+
+
+

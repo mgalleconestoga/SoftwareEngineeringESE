@@ -1,7 +1,9 @@
 <?php 
-    session_start();
+	// logout.php
+	session_start(); // Required for every page where you call or declare a session
+	session_destroy();
 
-    session_destroy(); 
-
-    echo "<p>Please click <a href='login.html'>here</a> to log in again</p>";
+	echo "You have been logged out. Click <a href='login.html'>here</a> to log in again";
 ?>
+
+

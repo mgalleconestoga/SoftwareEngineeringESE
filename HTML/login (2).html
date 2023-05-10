@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Forms: Login Page</title>
+		<link href="css/login_style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<form action="php/login.php" method="post">
+			<h1>Please log in</h1>
+			<div>
+				<label for="user" class="text_label">Username:</label>
+				<input id="user" type="text" class="text_input" name="username" />
+			</div>
+			<div>
+				<label for="pass" class="text_label">Password:</label>
+				<input id="pass" type="password" class="text_input" name="password" required /> 
+			</div>
+			<div><input type="submit" value="Log in" id="submit"/></div>
+			<div><a class="button" href="request_access.html">Request Access</a></div>
+		</form>
+		<script src="js/loadExample.js"></script>
+		<br />
+		<p>Copyright &copy 2017 Michael Galle</p>
+	</body>
+</html>
+
+
+
+
+

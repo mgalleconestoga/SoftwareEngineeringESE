@@ -1,0 +1,65 @@
+/* Pseudo-classes for Menu Links */
+a:link.menu {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+}
+
+a:visited.menu {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+}
+
+a:hover.menu {
+	font-weight: bold;
+    background-color: gray;	
+}
+
+a:active.menu {
+	font-weight: bold;
+	color: orange;
+}
+
+/* Pseudo-classes for Buttons and Forms */
+input.submit {
+	background-color: blue;
+	color: white; }
+input.submit:hover {
+	background-color: white;
+	color: blue; }	
+input.submit:active {
+	color: orange;}
+
+input.text, textarea.text {
+	color: gray;}
+input.text:focus, textarea.text:focus {
+	color: black;}
+
+/* Convert menu links from vertical 
+(block level) to horizontal (inline) */
+li.h_menu { display: inline; }
+	
+
+/* Add styles to the Gant Chart in the Project Plan Page */
+.mg {background-color: blue;}
+.at {background-color: gray;}
+.js {background-color: green;}
+
+table, th, td {text-align: center;
+	   border: 1px solid gray;
+	   border-spacing: 3px;
+}
+
+th, td {width: 6%;
+		padding: 2px 5px 2px 5px;
+}
+
+tr:hover {background-color: orange;}
+
+
+
+
+
+
+

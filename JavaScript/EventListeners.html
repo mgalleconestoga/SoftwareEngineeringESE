@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Using Event Listeners</title>
+		<link href="../css/login_style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>Using Event Listeners Example - Form input checking</h1>
+		<form action="php/login.php" method="post">
+			<h1>Please log in</h1>
+			<div>
+				<label for="username" class="text_label">Username:</label>
+				<input id="username" type="text" class="text_input" name="username" />
+			</div>
+			<div>
+				<label for="pass" class="text_label">Password:</label>
+				<input id="pass" type="password" class="text_input" name="password" required /> 
+			</div>
+			<div><input type="submit" value="Log in" id="submit"/></div>
+			<div>
+				<p>Error Messages:</p>
+				<p id="feedback"></p>
+			</div>
+		</form>
+		<script src="../js/eventListeners.js"></script>
+	</body>
+</html>
+
+

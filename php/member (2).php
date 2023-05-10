@@ -1,14 +1,17 @@
 <?php
-    session_start();            // Keep session valid!
+	// member.php
+	session_start();  // Required for every page where you call or declare a session
 
-    // Protect the content of this page
-    if(isset($_SESSION['username'])) {
-        // Protected content 
-        echo "Welcome, " . $_SESSION['username'] . "<br>";
-    
-        echo "<p>Please click <a href='logout.php'>here</a> to log out</p>";
-    } else {
-        echo "<p>You are not authorized. Click <a href='login.html'>here</a> to log in</p>";
-    }
-
+	// Make sure users that are not logged in do not have access to this page
+	if (isset($_SESSION['username'])) {
+		echo "Welcome, " . $_SESSION['username'] . "!<br />";
+	
+		// Add 'members only' content here 
+		echo "<p>Members only content - for your eyes only</p>";
+		
+		echo "Click to <a href='logout.php'>Logout</a>";
+	} else {
+		echo "<p>You must be logged in!</p>";
+	}
 ?>
+

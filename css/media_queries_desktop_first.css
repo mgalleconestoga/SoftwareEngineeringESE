@@ -1,0 +1,23 @@
+/* Extra-large screen (large desktops, 1200px and up) */
+/* No media query since this is the default case for Desktop first */ 
+body { background-color: black; }
+#color_me {
+	background-color: white;
+}
+/* Medium devices (desktops 992px and up) */
+@media (max-width: 992px) {
+	/* Styling applied if device width is below 992px */
+	body { background-color: red;	}
+	#color_me { background-color: white; }
+}
+@media (max-width: 768px) {
+	/* Styling applied if device width is below 768px */
+	body { background-color: orange; }
+	#color_me { background-color: white; }
+}
+@media (max-width: 300px) {
+	/* Styling applied if device width is below 300px */
+	body { background-color: yellow; }
+	#color_me { background-color: white; }
+}
+

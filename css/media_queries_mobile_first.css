@@ -1,0 +1,27 @@
+/* Extra-small screen (phones less than 768px) */
+/* No media query since this is the default case for mobile first */ 
+body { background-color: black; }
+#color_me {
+	background-color: white;
+}
+/* Small devices (tablets 768px and up) */
+@media (min-width: 768px) {
+	/* Styling applied if device width is below 768px */
+	body { background-color: red; }
+	#color_me { background-color: white; }
+}
+/* Medium devices (desktops 992px and up) */
+@media (min-width: 992px) {
+	/* Styling applied if device width is below 992px */
+	body { background-color: orange;	}
+	#color_me { background-color: white; }
+}
+/* Large devices (desktops 1200px and up) */
+@media (min-width: 1200px) {
+	/* Styling applied if device width is below 992px */
+	body { background-color: yellow;	}
+	#color_me { background-color: white; }
+}
+
+
+

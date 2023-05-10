@@ -1,0 +1,56 @@
+/* Mobile phone*/
+body {
+	margin-top: 100px;   /* Offset for content */
+}
+#head_wrap {
+	padding-left: 0;
+}
+#page_wrap {
+	width: 100%;
+	padding: 0;
+	background-color: #FFFFFF;
+}
+
+/* Desktop */ 
+@media(min-width: 768px){
+	body { 
+		margin-top: 50px; /* Offset for content */ 
+	}
+	#page_wrap {
+		padding-left: 225px; 
+	}
+	/* Side Menu */
+	.s_menu{
+		background-color: rgba(20,20,20,0.95); 
+		position: fixed; 
+		top: 51px; 
+		left: 225px;
+		margin-left: -225px;
+		width:225px; 
+		height: 100%;
+	}
+	.s_menu li {
+		width: 225px;
+		display: block;
+	}
+}
+
+
+/* Common Settings */
+/* Horizontal Menu */
+li.top_menu_item {
+	display: inline-block;
+	float: right;
+	padding-right: 20px;
+	
+}
+		
+.top_menu {
+	background-color: rgba(20,20,20,0.9);
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+
