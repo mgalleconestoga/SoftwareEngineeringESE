@@ -38,7 +38,8 @@ function showtable(string $path, string $user, string $password, $tablename) {
 }
 
 // Update
-function update(string $path, string $user, string $password, string $tablename, int $node_ID, int $new_status, int $new_currentFloor, int $new_requestedFloor, string $new_otherInfo) : void {
+function update(string $path, string $user, string $password, string $tablename, int $node_ID, int $new_status, int $new_currentFloor, 
+                int $new_requestedFloor, string $new_otherInfo) : void {
     $db = connect($path, $user, $password);
     $query = 'UPDATE ' . $tablename . ' SET status = :stat, currentFloor = :curFloor, requestedFloor = :rqFloor, otherInfo = :oInfo
              WHERE nodeID = :id' ;    // Note: Risks of SQL injection
@@ -50,7 +51,6 @@ function update(string $path, string $user, string $password, string $tablename,
     $statement->bindValue('id', $node_ID); 
     $statement->execute();                      // Execute prepared statement
 }
-
 // Delete
 function delete(string $path, string $user, string $password, string $tablename, int $node_ID) : void {
     $db = connect($path, $user, $password);

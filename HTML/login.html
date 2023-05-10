@@ -1,40 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Login</title>
-        <meta name='description' content='Page in project'/>
-        <meta name='robots' content='noindex nofollow'/>
-        <meta http-equiv='author' content='mgalle'/>
-        <meta http-equiv='pragma' content='no-cache'/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--<link href='../css/login_style.css' type='text/css' rel='stylesheet'/>-->
-    </head>
-    <body>
-        <h1>Please Log In</h1>
-        <form action='../php/authenticate.php' method='post' id='login'>
-            <div>
-                <label for='username' class='text_label'>Username:</label>
-                <input id='username' type="text" class='text_input' name='username' required/>
-            </div>
-            <div>
-                <label for='pass' class='text_label'>Password:</label>
-                <input id='pass' type="password" class='text_input' name='password' required/>
-            </div>
-            <div>
-                <input id='submit' type='submit' value='Log in' />
-            </div>
-            
-            <div><a href='request_access.html'>Request access</a></div>      
-        </form>
-        <div>
-            <br/>
-            <p>Error messages: </p>
-            <br/>
-            <p id='feedback'></p>
+    <title>Login</title>
+    <link href="../CSS/loginstyle.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <form action="../PHP/login.php" method="post">
+        <h1> Login</h1>
+        <div class="rw">
+            <label id="userlabel" for="user" class="text_label">Username: </label>
+            <input id="user" class="text_input" type="text" name="username" required />
         </div>
-        <br/><br/>
+        
+        <div class="rw">
+            <label for="pass" class="text_label">Password:</label>
+            <input id="passwd" class="text_input passwd" type="password" name="password" required />
+        </div>
+         
+        <input id="subbtn" type="submit" value="Submit me!"  />
+        <input type="image" id="sub" alt="submit button" src="../images/submit.jpg" />
+        <p><a id="req_acc" href="request_access.html">Request Access</a></p>
         <p>Copyright &copy Michael Galle</p>
-        <script src='js/eventListeners.js'></script>
-    </body>
-</html>
 
+        <h1>Error Messages</h1>
+        <p id="err"></p>
+
+        <script src="../JavaScript/eventListener.js"></script>
+    </form>
+</body>
+</html>

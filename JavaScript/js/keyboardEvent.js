@@ -4,7 +4,6 @@ var lastKey = document.getElementById("lastkey");
 var text = document.getElementById("message");
 
 // Functions
-
 function charCount(e) {
     // Characters left
     var textEntered, lengthOfText, charDisplay, counter, lastkey;
@@ -17,8 +16,6 @@ function charCount(e) {
     lastKey.innerHTML = 'Last key input: ' + String.fromCharCode(e.keyCode);
 
 }
-
-
 
 // Event listeners
 text.addEventListener('keypress', charCount, false); 

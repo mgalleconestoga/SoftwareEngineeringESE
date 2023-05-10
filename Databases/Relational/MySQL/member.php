@@ -12,7 +12,7 @@
         $database = 'elevator'; 
         $tablename = 'elevatorNetwork'; 
         $path = 'mysql:host=' . $host . ';dbname=' . $database; 
-        $user = 'michael'; 
+        $user = 'michael';  // Could be a variable from $_SESSION['username'] if the database has been set up with permissions for another user
         $password = 'ese';
 
         // Connect to database and make changes
@@ -31,16 +31,15 @@
 
         // Display welcome and form
         echo "<h1>Welcome, " . $_SESSION['username'] . "</h1>";
-        require 'elevatorNetworkForm.html';
-            
+        require 'elevatorNetworkForm.html'; 
         if(isset($_POST['insert'])) {
             echo "You pressed INSERT <br>"; 
             insert($path, $user, $password, $current_date, $current_time, $status, $currentFloor, $requestedFloor, $otherInfo);
-
+			
         } elseif(isset($_POST['update'])) {
             echo "You pressed UPDATE <br>";
             update($path, $user, $password, $tablename, $nodeID, $status, $currentFloor, $requestedFloor, $otherInfo);
-
+			
         } elseif(isset($_POST['delete'])) {
             echo 'You pressed DELETE <br>';
             delete($path, $user, $password, $tablename, $nodeID);
@@ -52,5 +51,4 @@
     } else {
         echo "<p>You are not authorized!!! Go away!!!!!</p>";
     }
-
 ?>

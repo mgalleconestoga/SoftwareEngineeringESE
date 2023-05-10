@@ -1,15 +1,15 @@
 <?php 
     // Authenticate.php
     session_start();
-    $username= $_POST['username'];
-    $password = $_POST['password'];
+    $username= $_POST['username'];      // michael
+    $password = $_POST['password'];     // ese
     $authenticated = FALSE;
 
     $db = new PDO('mysql:host=127.0.0.1;dbname=authorizedUsers', 'michael', 'ese');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
     // Authenticate against the database
-    $query = "SELECT * FROM authorisedUsers WHERE username = '$username'";
+    $query = "SELECT * FROM authorisedUsers WHERE username = '$username'"; 
     $rows = $db->query($query);
     foreach ($rows as $row) {
         echo $row['username'];

@@ -28,21 +28,4 @@ function callAll() {
 
 console.log(callAll()); 
 
-
-
-/*
-if (hourNow > 18) {
-    greeting = "Good evening"; 
-    greeting = greeting.toUpperCase();
-} else if (hourNow > 12) {
-    greeting = "Good afternoon";
-    greeting = greeting.toLowerCase();
-    func1();
-} else if (hourNow > 0) {
-    greeting = "Good morning";
-} else {
-    greeting = "Welcome";
-}
-*/
-
 document.write('<h2>' + greeting +'</h2>')
