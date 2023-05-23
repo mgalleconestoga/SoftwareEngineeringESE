@@ -12,6 +12,5 @@ if (hourNow > 22){
     greeting = 'Good morning';
 }
 
-
 var element = document.getElementById('greet');
 element.innerHTML = greeting;
