@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid Layout</title>
+	<link rel="stylesheet" type="text/css" href="css/960_12_col.css" /> 	<!-- Framework downloaded -->
+	<link rel="stylesheet" type="text/css" href="css/style2.css" /> 		<!-- Our own style sheet to see the columns easily -->
+</head>
+<body>
+	<div class="container_12 clearfix">										<!-- Container for whole page, clearfix sets height -->
+		<div id="header" class="grid_12">									<!-- Header width is 12 col -->
+			<h1>Logo</h1>
+			<div id="nav">
+				<ul>
+					<li><a href="">Home</a></li> <li><a href="">Project</a></li>
+					<li><a href="">Plan</a></li> <li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="feature" class="grid_12"><p>Feature</p></div>				<!-- Feature width is 12 col -->
+		<div class="article grid_4"><p>Column One</p></div>					<!-- Columns are 4 of 12 columns each -->
+		<div class="article grid_4"><p>Column Two</p></div>
+		<div class="article grid_4"><p>Column Three</p></div>
+		<div id="footer" class="grid_12"><p>&copy; Copyright 2017</p></div>
+	</div>
+</body>
+</html>
+

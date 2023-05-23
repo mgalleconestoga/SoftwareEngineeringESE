@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Request Access</title>
+
+    <meta name='description' content='Request access page for project VI' />
+		<meta name='robots' content='index follow' /> <!-- want page and links to be indexed -->
+		<meta http-equiv='author' content='Michael' />
+		<meta http-equiv='pragma' content='no-cache' /> <!-- force browser to reload page every time - updates often -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Add Bootstrap via CDN - Source: https://getbootstrap.com/ -->
+		<!-- CSS for the Layout and Styling components of Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> <!-- Stylesheet -->
+		<!-- Optional Bootstrap components for using functions etc -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>			<!-- JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> <!-- Popper.JS -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> <!-- JQuery -->
+
+		<link href='css/styles.css' type='text/css' rel='stylesheet' />
+    <!--[if lt IE 9]>
+      <script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
+    <![endif] -->
+
+  </head>
+  <body>
+    <header>
+			<nav>
+				<!-- navigation menu to be placed here later -->
+			</nav>
+		</header>
+
+    <article>
+      <h1>Request Access</h1>
+      <form class='reqAccess' action='php/requestAccess.php' method='post' id='requestAccess'>
+
+        <!-- Group basic info into a field with a legend -->
+        <fieldset>
+          <legend>
+            Contact Details
+          </legend>
+          <!-- Basic info -->
+          <p><label>First Name: <input class='text' type='text' name='firstname' placeholder='First name' required/></label></p>
+          <p><label>Last Name: <input class='text' type='text' name='lastname' placeholder='last name' required/></label></p>
+          <p><label>Email: <input class='text' type='email' name='email' /></label></p>
+          <p><label>Website: <input class='text' type='url' name='url' /></label></p>
+          <p><label>Birthdate: <input class='text' type='date' name='birthday' /></label></p>
+
+          <!-- Radio button -->
+          <label><input type='radio' name='fac_or_student' value='faculty' />Faculty</label>
+          <label><input type='radio' name='fac_or_student' value='student' />Student</label>
+
+        </fieldset>
+        <br />
+        <!-- Group other questions into a field with a legend -->
+
+        <fieldset>
+          <legend>
+            Other information
+          </legend>
+          <!-- Checkbox -->
+          <p>Please check all that apply</p>
+          <label><input type='checkbox' name='involvement[]' value='none'  />I am not involved in Project VI </label><br />
+          <label><input type='checkbox' name='involvement[]' value='instructor'  />I am an instructor in Project VI </label><br />
+          <label><input type='checkbox' name='involvement[]' value='otherInstructor'  />I am an instructor in another Project/College </label><br />
+          <label><input type='checkbox' name='involvement[]' value='student'  />I am an student in Project VI </label><br />
+          <label><input type='checkbox' name='involvement[]' value='industry'  />I am a member of industry, interested in this project </label><br />
+
+          <!-- Drop down list / 'select' box -->
+          <p>Do you drive a car? </p>
+          <select name='drive_car'>
+            <option value='no_answer' selected></option>
+            <option value='yes'>Yes</option>
+            <option value='no'>No</option>
+          </select>
+
+          <!-- Textarea -->
+          <p>Please tell us a little about yourself</p>
+          <textarea class='text'>About me ...</textarea>
+        </fieldset>
+
+        <!-- Submit button -->
+        <input class='submit' type='submit' value='Request access' />
+      </form>
+
+      <p>
+        <a href="index.html">Back to index</a>
+      </p>
+    </article>
+
+    <footer>
+      <p id='copyright'>
+        Copyright &copy Michael Galle
+      </p>
+    </footer>
+
+
+  </body>
+  </html>

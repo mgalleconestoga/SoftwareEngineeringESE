@@ -1,0 +1,179 @@
+/* Older Browser Compatibilty */
+header, section, footer, aside, nav, article, figure {
+  display: block;
+}
+
+body {
+  font-family:Georgia,serif;
+}
+
+figcaption {
+  display: block;
+  margin-left: 20px;
+  text-align: justified;
+  font-style: italic;
+  font-size: 90%;
+}
+
+img {
+  height: 150px;
+  display: block;      /* introduced later - Need to make it a block level element to centre it */
+  margin-left: 20px;  /* introduced later */
+}
+
+img.large { width: 500px;}  /* Standardized image classes */
+img.med { width: 200px;}
+img.small { width: 100px;}
+
+textarea {
+  display:block;
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form, footer {
+  display:block;
+  width:500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table, th, td {
+  text-align: center;
+  border: 1px solid gray;
+  border-spacing: 3px;
+}
+th, td {
+  width: 6%;
+  padding: 2px 5px 2px 5px;
+}
+
+/* Classes */
+.important {
+  color:blue;
+}
+
+.h_menu {         /* Convert menu links from vertical (block level) to horizontal (horizontal menu) */
+  display: inline;
+  margin: 10px 20px 10px 20px;
+}
+
+.text_label {
+  width: 100px;
+  float: left;
+  align-text: right;
+  padding: 0px 10px 0px 0px;
+  margin-bottom: 10px;
+}
+
+.text_input {
+  width: 200px;
+  height: 20px;
+  text-align: left;
+  padding: 0px 0px 0px 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.text_input:focus {
+  border-color: orange;
+  border-width: 3px;
+}
+
+.logmein {
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 3px 10px;
+  float: right;
+  margin: 0px 27px 0px 0px;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.logmein:hover {
+  background-color: white;
+  color: black;
+  border-color: blue;
+}
+
+.block {
+  display: block;
+  float:none;
+}
+
+.mybox {
+  border: 1px solid black;
+  border-radius: 15px;
+  /*margin: 10px 10px 10px 10px;*/
+  background-color: rgba(200,200,200,0.8);
+  box-shadow: 5px 5px 3px gray;
+}
+#floor {
+  
+  text-align: center;
+
+}
+
+/* Project Plan Table design */
+tr:hover{
+  background-color: yellow;
+}
+td:hover, th:hover {
+  background-color: rgba(0,0,127,0.5);
+}
+.mg {background-color: blue;}
+.at {background: gray;}
+.js {background-color: green;}
+
+
+
+/* Horizontal menu */
+/* ************************************************ */
+a:link.menu, a:visited.menu {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+a:hover.menu {
+  font-weight: 900;
+}
+a:active.menu {
+  font-weight: 900;
+  color: orange;
+}
+
+/* Forms - Request Access Page */
+input.submit {
+  background-color: blue;
+  color: white;
+  float: right;
+}
+
+input.submit:hover {
+  background-color: white;
+  color:blue;
+}
+
+input.submit:active {
+  color:orange;
+}
+
+input.text, textarea.text {
+  color:gray;
+}
+
+input.text:focus, textarea.text:focus {
+  color:black;
+}
+
+legend {
+  background-color: rgba(0,0,255,0.7);
+  color: white;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+form.reqAccess {
+  width: 450px;
+}
