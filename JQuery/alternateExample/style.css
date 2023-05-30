@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(239, 217, 217);
+}
+
+.newClass {
+    font-size: 6rem;
+    color: blue !important;
+}
+
+.awesome {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bgGreen {
+    background-color: green;
+}

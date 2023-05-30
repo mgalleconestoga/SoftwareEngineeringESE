@@ -10,7 +10,7 @@ function charCount(e) {
     textEntered = text.value; 
     lengthOfText = textEntered.length;
     counter = 180 - lengthOfText; 
-    elChars.innerHTML = "CHaracters left = " + counter; 
+    elChars.innerHTML = "Characters left = " + counter; 
 
     // Last key entered
     lastKey.innerHTML = 'Last key input: ' + String.fromCharCode(e.keyCode);
