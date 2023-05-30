@@ -1,3 +1,4 @@
+
 /******** Selecting elements *******************/
 //$ === jQuery
 // $() is equivalent to document.querySelectorAll()
