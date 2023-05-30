@@ -1,12 +1,12 @@
 <?php 
-	//require 'index.html';  
-	//echo 'hello world';	
+	require 'index.html';  
+	echo 'hello world';	
 ?>
 
-
 <?php 
-	/* valid / invalid variable names and data types */ 
-/*_variable_a = 1;  		// Valid name, int variable
+/*
+	//  valid / invalid variable names and data types  
+	_variable_a = 1;  		// Valid name, int variable
 	$a_variable = 2.1; 		// Valid name, float variable
 	$Boolean_1_var = true;	// Valid name, bool variable
 	$stringVar = "My name"; // Valid name in camelCase, string variable 	
@@ -16,14 +16,14 @@
 
 <?php 
 /*
-	/* Type Juggling */ 
+	// Type Juggling  
 	$a = "1";  				// string character
 	$b = 2; 				// integer
 	$c = $a + $b;			// results in 1 + 2 = 3 (converted "1" to integer 1)
-	$d = $a . $b;			/* '.' is string concatenation so this results in 
-							 * "1" . "2" --> "12" (converted 2 to "2" based on context '.')
-							 */
-
+	$d = $a . $b;			// '.' is string concatenation so this results in 
+							// "1" . "2" --> "12" (converted 2 to "2" based on context '.')
+							 
+*/
 ?>
 
 
@@ -92,7 +92,9 @@
 */
 ?>
 
-<?php /*
+<?php 
+// May need to move this code to a new file - it covers Exceptions
+/*
 class InvalidInputException extends Exception {}
 class AlternateInvalidInputException extends Exception {}
 

@@ -12,6 +12,7 @@
             echo '<p>Members ONLY content </p>';
             echo '<p>Please click <a href=\'logout.php\'>here</a> to log out</p>';
 
+            /*
             require '../HTML/elevatorNetworkForm.html';          // Insert to database form 
 
             // Get data from database
@@ -60,7 +61,8 @@
                                   . " | " . $row['requestedFloor'] . " | " . $row['otherInfo'];
                 echo '<br/>';
             }       
-
+            */
+            
         } else {
             // User not authenticated
             echo 'You are not authenticated - go away!'; 
