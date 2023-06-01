@@ -1,22 +1,3 @@
-/*
-// Create a message
-var msg = '<div class=\"header\"><a id=\"close\" href=\"#\">close X</a></div>';
-msg += '<div><h2>Click close X to close</h2></div>';
-
-var elNote = document.createElement('div');   // Create new element 
-elNote.setAttribute('id', 'note');			  // Add id to new element
-elNote.innerHTML = msg; 					  // Add the message
-document.body.appendChild(elNote);			  // Add to page
-
-function dismissNote() {
-	document.body.removeChild(elNote);		   // Remove the note
-}
-
-var elClose = document.getElementById('close'); // Select the close X element
-elClose.addEventListener('click', dismissNote, false); // clear note when clicked
-
-*/
-
 // Uses the EVENT object to show position of mouse relative to the 3 coordinate systems 
 var sx = document.getElementById('sx'); 	// Element to hold screenX 
 var sy = document.getElementById('sy'); 	// Element to hold screenY 
