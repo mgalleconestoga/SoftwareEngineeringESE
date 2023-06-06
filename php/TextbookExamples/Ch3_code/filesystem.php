@@ -29,8 +29,8 @@
  
  <?php 
  /*
-	// File I/O for CSV files 
-	//mkdir(__DIR__ . "/csv");   							// run once 
+	// File I/O functions and CSV files 
+	//mkdir(__DIR__ . "/csv");   // Make the csv folder							// run once 
 	$my2DArray = [ [1,1,1], [2,2,2], [3,3,3], [4,4,4], [5,5,5] ];  
 	$file = 'file.csv';
 	$newFile = 'newFile.csv'; 
