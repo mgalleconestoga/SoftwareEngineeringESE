@@ -153,27 +153,3 @@
 	//addNumbers(1, 'wordString', true);  	// Fails always - cannot transform to int
 	*/
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
