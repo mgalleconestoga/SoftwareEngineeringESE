@@ -10,7 +10,7 @@
  ?>
  
 <?php
-	
+	/*
 	// Get data from JSON file
 	$booksJson = file_get_contents(__DIR__ . '/json/books.json');  // Save as string 
 	$booksArray = json_decode($booksJson, true);				   // Convert string to array of objects in PHP
@@ -25,10 +25,11 @@
 	file_put_contents(__DIR__ . '/json/booksNew.json', $booksJsonNew); 	// Write the stringto the file
 	
 	echo "Successfully wrote to file booksNew.json !"
+	*/
  ?>
  
  <?php 
- /*
+ 
 	// File I/O functions and CSV files 
 	//mkdir(__DIR__ . "/csv");   // Make the csv folder							// run once 
 	$my2DArray = [ [1,1,1], [2,2,2], [3,3,3], [4,4,4], [5,5,5] ];  
@@ -63,5 +64,5 @@
 		fputcsv($fpNew, $subArray); 		// format line as csv and write to location of file pointer
 	}
 	fclose($fpNew);
-*/
+
  ?>
