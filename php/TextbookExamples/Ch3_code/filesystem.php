@@ -1,7 +1,8 @@
  <?php
 	/*
-	$booksJson = file_get_contents(__DIR__ . '/json/books.json'); 
-	$booksArray = json_decode($booksJson, true);
+	// Get data from JSON file
+	$booksJson = file_get_contents(__DIR__ . '/json/books.json');   // Save as string
+	$booksArray = json_decode($booksJson, true);					// Convert string to array of objects in PHP
 	foreach ($booksArray as $book) {
 		echo "Title: " . $book["title"] . ", Author: ". $book["author"] . "<br />";
 	} 
@@ -10,22 +11,27 @@
  
 <?php
 	/*
-	$booksJson = file_get_contents(__DIR__ . '/json/books.json'); 
-	$booksArray = json_decode($booksJson, true);
+	// Get data from JSON file
+	$booksJson = file_get_contents(__DIR__ . '/json/books.json');  // Save as string 
+	$booksArray = json_decode($booksJson, true);				   // Convert string to array of objects in PHP
 	
 	foreach ($booksArray as $key => $book) {
 		$booksArray[$key]["title"] = $book["title"] . " - This is a great book!"; // EDIT TITLES
 		// echo "New Title: " . $booksArray[$key]["title"] . "<br />";
 	} 
+
 	// Now save the changes back to the JSON file
-	$booksJsonNew = json_encode($booksArray, true);
-	file_put_contents(__DIR__ . '/json/booksNew.json', $booksJsonNew); 
+	$booksJsonNew = json_encode($booksArray, true);					// Convert PHP array of objects to a string
+	file_put_contents(__DIR__ . '/json/booksNew.json', $booksJsonNew); 	// Write the stringto the file
+	
+	echo "Successfully wrote to file booksNew.json !"
 	*/
  ?>
  
  <?php 
-	// File I/O for CSV files 
-	//mkdir(__DIR__ . "/csv");   							// run once 
+ 
+	// File I/O functions and CSV files 
+	//mkdir(__DIR__ . "/csv");   // Make the csv folder							// run once 
 	$my2DArray = [ [1,1,1], [2,2,2], [3,3,3], [4,4,4], [5,5,5] ];  
 	$file = 'file.csv';
 	$newFile = 'newFile.csv'; 
@@ -58,4 +64,5 @@
 		fputcsv($fpNew, $subArray); 		// format line as csv and write to location of file pointer
 	}
 	fclose($fpNew);
+
  ?>
