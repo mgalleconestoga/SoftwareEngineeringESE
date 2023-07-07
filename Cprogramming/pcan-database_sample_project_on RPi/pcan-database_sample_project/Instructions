@@ -1,0 +1,21 @@
+From the terminal
+
+$ cd pcan-database_sample_project
+$ cd src
+
+To recompile the program
+$ make clean
+$ make
+
+To run the program
+
+$ ./main
+
+To control the elevator from the website
+
+- Select option #3 from the program
+- Open browser and type 'localhost'
+- Change floor number (when it starts the program will initialize the elevator to floor 1) 
+
+
+
