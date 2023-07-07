@@ -1,3 +1,9 @@
+/* pcanFunctions.cpp - Functions for Sending and receiving messages over the CAN bus.
+ *                     This only works on the Raspberry Pi, where the PCAN library has been installed
+ * Author: Michael Galle
+ *
+ * 
+ * */
 #include "../include/pcanFunctions.h"
 
 #include <stdio.h>
@@ -10,7 +16,7 @@
 #include <fcntl.h>    					// O_RDWR
 #include <unistd.h>
 #include <ctype.h>
-#include <libpcan.h>   					// PCAN library
+#include <libpcan.h>   					// PCAN library - THIS IS ONLY INSTALLED ON THE Raspberry Pi (Will not compile in Ubuntu)
 
 
 // Globals
@@ -27,7 +33,7 @@ DWORD status;
 // Functions
 // *****************************************************************
 int pcanTx(int id, int data){
-	h = LINUX_CAN_Open("/dev/pcanusb32", O_RDWR);		// Open PCAN channel
+	h = LINUX_CAN_Open("/dev/pcanusb32", O_RDWR);		// Open PCAN channel (on RPi)
 
 	// Initialize an opened CAN 2.0 channel with a 125kbps bitrate, accepting standard frames
 	status = CAN_Init(h, CAN_BAUD_125K, CAN_INIT_TYPE_ST);
@@ -39,7 +45,7 @@ int pcanTx(int id, int data){
 	Txmsg.ID = id; 	
 	Txmsg.MSGTYPE = MSGTYPE_STANDARD; 
 	Txmsg.LEN = 1; 
-	Txmsg.DATA[0] = data; 
+	Txmsg.DATA[0] = data; 				// Only sending one byte so using first array element
 
 	sleep(1);  
 	status = CAN_Write(h, &Txmsg);

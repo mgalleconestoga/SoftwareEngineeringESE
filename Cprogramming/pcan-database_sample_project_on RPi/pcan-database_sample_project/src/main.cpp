@@ -1,6 +1,14 @@
-#include "../include/pcanFunctions.h"
-#include "../include/databaseFunctions.h"
-#include "../include/mainFunctions.h"
+/* main.cpp - Mainline code that calls the menus/submenus, database read/write functions and CAN read/write functions
+ *			  NOTE: This code will only run on the Raspberry Pi where the PCAN library is installed and a PCAN USB device is connected.
+ *					This code is provided here to discuss/describe functionality during the lecture 
+ *	
+ * Author: Michael Galle
+ * 
+ */
+
+#include "../include/pcanFunctions.h"			// Only works on Raspberry Pi where the PCAN library is installed
+#include "../include/databaseFunctions.h"		// Database functions (wrappers) for Connector C++ library functions		
+#include "../include/mainFunctions.h"			// Menu selection functions
 
 #include <stdio.h>
 #include <stdlib.h>

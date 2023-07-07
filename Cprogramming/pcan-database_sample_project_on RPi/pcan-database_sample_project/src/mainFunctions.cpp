@@ -1,3 +1,9 @@
+/* mainFunctions.cpp - Provides menus and submenus for calling database and CAN read/write functions 
+ * Author: Michael Galle
+ *
+ * 
+ */
+
 #include "../include/pcanFunctions.h"
 #include "../include/mainFunctions.h"
 
