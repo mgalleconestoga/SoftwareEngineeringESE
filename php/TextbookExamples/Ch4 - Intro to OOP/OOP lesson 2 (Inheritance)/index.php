@@ -10,6 +10,7 @@ echo "getFirstname() is a public method of the parent class 'Person', inherited 
 ?>
 
 <?php 
+/*
 require_once __DIR__ . '/Person.php';
 require_once __DIR__ . '/Customer.php';
 require_once __DIR__ . '/Basic.php';
@@ -26,5 +27,7 @@ $basicCustomer = new Basic(1, 'John', 'Doe', 'jdoe@myemail.com');
 $premiumCustomer = new Premium(2, 'Alex', 'Doe', 'adoe@myemail.com');	   
 echo "This is " . getName($basicCustomer) . " a " . customerType($basicCustomer) . " customer <br />"; 
 echo "This is " . getName($premiumCustomer) . " a " . customerType($premiumCustomer) . " customer <br />";
+
+*/
 ?>
 

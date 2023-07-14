@@ -24,10 +24,15 @@ class Person {
 	private $email; 
 	
 	public function __construct(int $id, string $firstname, string $surname, string $email) {
-		$this->id = $id; $this->email = $email; 					
-		$this->firstname = $firstname; $this->surname = $surname; 			
+		$this->id = $id; 
+		$this->email = $email; 					
+		$this->firstname = $firstname; 
+		$this->surname = $surname; 			
 	}
-	use PersonMethods;
+	
 }
 ?>
+
+
+
 

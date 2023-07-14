@@ -22,3 +22,6 @@ function showHint(str) {
   function printHint() {
     document.querySelector('#txtHint').innerHTML = '<p>' + hintArray[0] + '</p>' + '<p>' + hintArray[1] + '</p>' + '<br />' ;
   }
+
+  // Initialize the hint array
+  var hintArray = [];
