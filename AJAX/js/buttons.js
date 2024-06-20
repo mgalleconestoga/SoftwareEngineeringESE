@@ -17,7 +17,7 @@ function showFloor() {
                                               // THIS IS A GLOBAL VARIABLE SINCE DECLARED IN HTML FILE - Convert text string to javascript array in JSON format 
                                               // 'this' refers to the xmlhttp object and responseText is the property that contains the text returned from the server
         } };
-        xmlhttpShow.open("GET", "../php/buttons.php?q=", true);  // Open connection
+        xmlhttpShow.open("GET", "../php/buttons.php?floor=", true);  // Open connection
         xmlhttpShow.send();                                      // Send request
           
 }
